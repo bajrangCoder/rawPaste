@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>{% block title %}{% endblock title%}</title>
+        <meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	{% block extra_headtag %}{% endblock extra_headtag %}
+	</head>
+	<body style="{% block body_style %}{% endblock body_style %}">
+		{% block body %}{% endblock body %}
+	</body>
+</html>

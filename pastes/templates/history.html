@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}History - rawPaste{% endblock title %}
+{% block body %}
+    {% if status == "no_data" %}
+        <h1>No data</h1>
+    {% else %}
+        <h1>Your Pastes</h1>
+        {% for paste in data %}
+            <ul>
+                <li>
+                    <a href="{{ paste.get_absolute_url }}"><h2>{{paste.title}}</h2></a>
+                    <h3>{{paste.expired_on}}</h3>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+{% endblock body %}
